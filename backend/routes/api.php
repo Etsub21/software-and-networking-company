@@ -1,8 +1,11 @@
 <?php
+<?php
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Response;
 
 Route::get('/test-connection', function () {
-    return response()->json([
+    return Response::json([
         'status' => 'success',
     ]);
 });
