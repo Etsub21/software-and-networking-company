@@ -1,11 +1,10 @@
 <?php
-<?php
 
+use App\Models\Inquiry;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Response;
 
-Route::get('/test-connection', function () {
-    return Response::json([
-        'status' => 'success',
-    ]);
+Route::post('/inquiry', function (Request $request) {
+    $inquiry = Inquiry::create($request->all());
+    return response()->json(['message' => 'Inquiry received successfully!'], 201);
 });
