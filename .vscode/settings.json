@@ -35,5 +35,8 @@
     "intelephense.diagnostics.undefinedClassConstants": false,
     "intelephense.diagnostics.undefinedMethods": false,
     "intelephense.diagnostics.undefinedProperties": false,
-    "intelephense.diagnostics.undefinedVariables": false
+    "intelephense.diagnostics.undefinedVariables": false,
+    "php.validate.enable": false,
+    "intelephense.diagnostics.run": "onSave",
+    "intelephense.diagnostics.format": false
 }
