@@ -2,14 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-use App\Models\Inquiry;
-use Illuminate\Http\Request;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\InquiryController;
 
+Route::get('/', [ProjectController::class, 'index']);
 
-// We are removing the 'api/' part just to test
-Route::post('/inquiry-test', function (Request $request) {
-    return Inquiry::create($request->all());
-});
+Route::post('/contact', [InquiryController::class, 'store']);

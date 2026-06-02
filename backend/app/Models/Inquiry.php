@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inquiry extends Model
 {
-    //
+     'name',
+        'email',
+        'message'
+        
 }
